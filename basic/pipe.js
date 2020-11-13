@@ -1,3 +1,3 @@
 import {go} from './go.js';
 
-export const pipe = (fn, ...fns) => a => go(fn(a), ...fns)
+export const pipe = (f, ...fns) => (...args) => go(f(...args), ...fns)
